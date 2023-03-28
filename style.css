@@ -48,3 +48,23 @@
      transition: 0.5s;
      box-shadow: 0px 0.2px 4px 4px lightblue;
 }
+
+/* randomNumber */
+
+.myBtn {
+     padding: 10;
+     margin: 10px;
+}
+
+*{
+     margin: 10px;
+}
+
+#text3 {
+     color : #fff ;
+     padding: 5px;
+     font-size: 25px ;
+     background-color: #000000;
+     width: fit-content;
+     border-radius: 10%;
+}
