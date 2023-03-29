@@ -1,14 +1,29 @@
-/// Some Few More Conditional code :
-let x;
+// Make a Small Guess Game :
 
-document.getElementById("myBtn").onclick = function() {
-     if(document.getElementById('check1').checked){
-          x = " The BOX is Checked !";
-          document.getElementById("myText").innerHTML = x ;
+const answer = Math.floor((Math.random() * 10) + 1) ;
+let guesses = 0 ;
+// console.log(answer) ;
+document.getElementById("mySubmit").onclick = function() {
+     let guess = document.getElementById("myInput").value ;
+     guesses++ ;
+     if(guess == answer){
+          document.getElementById("guessResult").innerHTML = `${answer} is Correct! Guesses : ${guesses} ` ;
+          // location.reload() ;
+     }else if(guess > answer){
+          document.getElementById("guessResult").innerHTML = `Too Large! Guesses : ${guesses}`;
+          // location.reload() ;
+     }else if(guess < answer){
+          document.getElementById("guessResult").innerHTML = `Too Small ! Guesses : ${guesses}`;
+          // location.reload();
      }else {
-          x = " the BOX is Not Checked !";
-          document.getElementById("myText").innerHTML = x ;
+          document.getElementById("guessResult").innerHTML = `Enter a Number ! Guesses : ${guesses}`;
      }
+
+     document.getElementById("mySubmit").ondblclick = function() {
+          location.reload();
+     }
+
 }
 
-console.log(x);
+
+console.log(`Answer :  ${answer}`);
